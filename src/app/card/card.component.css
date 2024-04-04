@@ -1,0 +1,95 @@
+.card {
+  position: relative;
+  width: 25rem;
+  height: 35rem;
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 25rem;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 24rem !important;
+  height: 100%;
+  backface-visibility: hidden;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.card-front {
+  background-color: #fff;
+  /* border-radius: 20px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: rotateY(0deg); /* Initial state */
+}
+
+.card-back {
+  background-color: #f1f1f1;
+  /* border-radius: 20px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: rotateY(180deg); /* Flipped state */
+}
+ .bg{
+  background-color: rgb(32, 32, 32);
+ }
+
+
+.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.rb {
+        width: 18rem;
+        height: 17rem;
+        background-color: rgb(32, 29, 29);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom: 16px solid rgb(202, 19, 19);
+    }
+.rb2 {
+        width: 18rem;
+        height: 17rem;
+        background-color: white;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom: 16px solid rgb(202, 19, 19);
+    }
+.bw
+{
+  border-width: 6px;
+}
+/* .svg-container {
+  display: flex;
+  flex-direction: column;
+} */
+
+.svg-container svg {
+  margin-bottom: 10px; /* Adjust the spacing between the SVGs */
+}
+/* backcard svg */
+ .flex > svg:not(:last-child) {
+    margin-right: -180px;
+    z-index: 30px;
+  }
+.letter-spacing{
+letter-spacing: 0.3rem;
+}

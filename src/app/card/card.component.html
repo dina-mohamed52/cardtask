@@ -1,0 +1,20 @@
+<div class="flex justify-center items-center mt-8">
+  <div class="card" [class.flipped]="isFlipped" (click)="flipCard()">
+    <div class="card-inner">
+      <!-- front side -->
+      <div class="front bg-gray-200  h-[37rem] w-[14rem] p-[2rem]">
+        <div class=" w-[22rem] mt-[7.4rem]">
+          <!-- Front content -->
+          <app-frontcard></app-frontcard>
+        </div>
+      </div>
+      <!-- back side -->
+      <div class="back bg-gray-200 h-[37rem] ml-[1rem] w-[14rem] p-[2rem]">
+        <div class=" w-[22rem] mt-[7.4rem]">
+          <!-- Back content -->
+          <app-backcard></app-backcard>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

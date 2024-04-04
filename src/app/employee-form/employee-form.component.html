@@ -1,0 +1,195 @@
+<!-- Container for the form -->
+<div class="max-w-md mx-auto bg-white mt-8 p-8 border rounded-lg shadow-lg">
+  <!-- Form heading -->
+  <h1 class="text-2xl font-bold mb-6 text-gray-600 text-center">
+    Employee Data
+  </h1>
+
+  <!-- Form -->
+  <form class="space-y-4" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <!-- Company Name Field -->
+    <div>
+      <label for="CompanyName" class="block text-sm font-medium text-gray-700"
+        >Company Name</label
+      >
+      <input
+        id="CompanyName"
+        formControlName="CompanyName"
+        [class.invalid]="
+          registerForm.get('CompanyName')?.invalid &&
+          (registerForm.get('CompanyName')?.dirty ||
+            registerForm.get('CompanyName')?.touched ||
+            isSubmitted)
+        "
+        type="text"
+        class="outline-none mt-1 py-2 block w-full rounded-md border-gray-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-300 focus:ring-opacity-20"
+      />
+      <span
+        *ngIf="
+          (registerForm.get('CompanyName')?.hasError('required') ||
+            registerForm.get('CompanyName')?.hasError('pattern')) &&
+          (registerForm.get('CompanyName')?.dirty ||
+            registerForm.get('CompanyName')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+      >
+        {{
+          registerForm.get("CompanyName")?.hasError("required")
+            ? "This field is required."
+            : "Please provide a valid string name."
+        }}
+      </span>
+    </div>
+
+    <!-- Employee Name Field -->
+    <div>
+      <label for="EmployeeName" class="block text-sm font-medium text-gray-700"
+        >Employee Name</label
+      >
+      <input
+        id="EmployeeName"
+        type="text"
+        formControlName="EmployeeName"
+        [class.invalid]="
+          registerForm.get('EmployeeName')?.invalid &&
+          (registerForm.get('EmployeeName')?.dirty ||
+            registerForm.get('EmployeeName')?.touched ||
+            isSubmitted)
+        "
+        class="outline-none mt-1 py-2 block w-full rounded-md border-gray-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-300 focus:ring-opacity-20"
+      />
+      <span
+        *ngIf="
+          (registerForm.get('EmployeeName')?.hasError('required') ||
+            registerForm.get('EmployeeName')?.hasError('pattern')) &&
+          (registerForm.get('EmployeeName')?.dirty ||
+            registerForm.get('EmployeeName')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+      >
+        {{
+          registerForm.get("EmployeeName")?.hasError("required")
+            ? "This field is required."
+            : "Please provide a valid string name."
+        }}
+      </span>
+    </div>
+
+    <!-- ID NO Field -->
+    <div>
+      <label for="IDNO" class="block text-sm font-medium text-gray-700"
+        >ID NO</label
+      >
+      <input
+        id="IDNO"
+        type="text"
+        formControlName="IDNO"
+        [class.invalid]="
+          registerForm.get('IDNO')?.invalid &&
+          (registerForm.get('IDNO')?.dirty ||
+            registerForm.get('IDNO')?.touched ||
+            isSubmitted)
+        "
+        class="outline-none mt-1 py-2 block w-full rounded-md border-gray-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-300 focus:ring-opacity-20"
+      />
+      <span
+        *ngIf="
+          (registerForm.get('IDNO')?.hasError('required') ||
+            registerForm.get('IDNO')?.hasError('pattern')) &&
+          (registerForm.get('IDNO')?.dirty ||
+            registerForm.get('IDNO')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+      >
+        {{
+          registerForm.get("IDNO")?.hasError("required")
+            ? "This field is required."
+            : "ID must be a valid number."
+        }}
+      </span>
+    </div>
+
+    <!-- DOB Field -->
+    <div>
+      <label for="DOB" class="block text-sm font-medium text-gray-700"
+        >DOB</label
+      >
+      <input
+        id="DOB"
+        formControlName="DOB"
+        [class.invalid]="
+          registerForm.get('DOB')?.invalid &&
+          (registerForm.get('DOB')?.dirty ||
+            registerForm.get('DOB')?.touched ||
+            isSubmitted)
+        "
+        type="date"
+        class="outline-none mt-1 py-2 block w-full rounded-md border-gray-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-300 focus:ring-opacity-20"
+      />
+           <span
+        *ngIf="
+          (registerForm.get('DOB')?.hasError('required') ||
+            registerForm.get('DOB')?.hasError('pattern')) &&
+          (registerForm.get('DOB')?.dirty ||
+            registerForm.get('DOB')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+      >
+        {{
+          registerForm.get("DOB")?.hasError("required")
+            ? "This field is required."
+            : "DOB must be a valid date."
+        }}
+      </span>
+    </div>
+
+    <!-- Email Field -->
+    <div>
+      <label for="Email" class="block text-sm font-medium text-gray-700"
+        >Email</label
+      >
+      <input
+        id="Email"
+        type="email"
+        formControlName="Email"
+        [class.invalid]="
+          registerForm.get('Email')?.invalid &&
+          (registerForm.get('Email')?.dirty ||
+            registerForm.get('Email')?.touched ||
+            isSubmitted)
+        "
+        class="outline-none mt-1 py-2 block w-full rounded-md border-gray-500 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-300 focus:ring-opacity-20"
+      />
+      <span
+        *ngIf="
+          (registerForm.get('Email')?.hasError('required') ||
+            registerForm.get('Email')?.hasError('pattern')) &&
+          (registerForm.get('Email')?.dirty ||
+            registerForm.get('Email')?.touched ||
+            isSubmitted)
+        "
+        class="error"
+      >
+        {{
+          registerForm.get("IDNO")?.hasError("required")
+            ? "This field is required."
+            : "please provide an vaild email formate"
+        }}
+      </span>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button
+        type="submit"
+        class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+      >
+        Register
+      </button>
+    </div>
+  </form>
+</div>

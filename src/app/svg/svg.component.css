@@ -1,0 +1,4 @@
+.flex > svg:not(:last-child) {
+    margin-right: -180px;
+    z-index: 30px;
+  }

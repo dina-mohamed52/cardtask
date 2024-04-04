@@ -1,0 +1,29 @@
+
+.rb {
+        width: 20rem;
+        height: 17rem;
+
+
+
+        background-color: rgb(32, 29, 29);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 115px;
+        border-bottom-right-radius: 115px;
+        /* border-bottom: 16px solid rgb(202, 19, 19);*/
+    }
+
+
+ .bg{
+  background-color: rgb(44, 42, 42);
+ }
+.bw
+{
+  border-width: 6px;
+}
+.redd{
+  background:rgb(230, 44, 44);
+}
+.borderCol{
+  border-color:rgb(230, 44, 44) ;
+}

@@ -1,0 +1,24 @@
+.rb2 {
+        width: 20rem;
+        height: 15rem;
+        background-color: white;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border-bottom: 16px solid rgb(202, 19, 19);
+    }
+ .bg{
+  background-color: rgb(32, 32, 32);
+ }
+ .letter-spacing{
+letter-spacing: 0.3rem;
+}
+ .flex > svg:not(:last-child) {
+    margin-right: 180px;
+    z-index: 30px;
+  }
+.tsize
+{
+  font-size: xx-small;
+}

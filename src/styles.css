@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.borderCol{
+  border-color:rgb(230, 44, 44) ;
+}
+.bg{
+  background-color: rgb(44, 42, 42);
+ }
